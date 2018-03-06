@@ -1,0 +1,125 @@
+<% include ./partials/header %>
+
+<div class="main-head">
+    <div class="container">
+        <div class="head">
+            <div class="row">
+                <div class="col-md-12 p0 slick-main-head">
+                    <div class="item" >
+                        <div class="category"><a href="##">Telefon</a></div>
+                        <a href="#">
+                            <img src="images/phone.jpg" alt="" class="head-item-image">
+                            <span class="text">Web Sitenizin Mobil Görünümünü Test Edin</span>
+                        </a>
+                    </div>
+                    <div class="item" >
+                        <div class="category"><a href="#">Telefon</a></div>
+                        <a href="#">
+                            <img src="images/phone.jpg" alt="" class="head-item-image">
+                            <span class="text">Web Sitenizin Mobil Görünümünü Test Edin</span>
+                        </a>
+                    </div>
+                    <div class="item" >
+                        <div class="category"><a href="#">Telefon</a></div>
+                        <a href="#">
+                            <img src="images/phone.jpg" alt="" class="head-item-image">
+                            <span class="text">Web Sitenizin Mobil Görünümünü Test Edin</span>
+                        </a>
+                    </div>
+                    <div class="item" >
+                        <div class="category"><a href="#">Telefon</a></div>
+                        <a href="#">
+                            <img src="images/phone.jpg" alt="" class="head-item-image">
+                            <span class="text">Web Sitenizin Mobil Görünümünü Test Edin</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 p0">
+                <section>
+                    <% data.forEach((d) =>{ %>
+                    <div class="title">
+                        <h1>Son Yazılar</h1>
+                    </div>
+                    <article>
+                    <div class="image">
+                        <div class="category">
+                            <ul class="post-categories">
+                                <li><a href="#" rel="category tag"><%= d.postCategory %></a></li>
+                            </ul>
+                    </div>
+                        <div class="comments">
+                            <a href="#">2 Yorum</a>
+                        </div>
+                        <a href="#">
+                            <img width="640" height="250" src="<%= d.image %>">
+                        </a>
+                    </div>
+                    <div class="post-center">
+                        <h3>
+                            <a href="#">                                
+                                <%= d.postTitle %>
+                    		</a>
+                        </h3>
+                        <div class="author">
+                            Bu içerik 2 ay önce <a href="#">ibrahimsakar</a> tarafından yazılmıştır.
+                        </div>
+                        <p><%= d.postContent %></p>
+                        <div class="read-more">
+                            <a href="#">DEVAMINI OKU</a>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </article>
+                    <%  }); %>
+                </section>
+            </div>
+            <div class="col-md-4">
+                <div class="right-boxex">
+                    <div class="box">
+                        <div class="search">
+                            <form action="">
+                                <input type="text" placeholder="Arama Yap...">
+                                <input type="submit" value="">
+                                <span class="fa fa-search"></span>
+                            </form>
+                        </div>
+                        <div class="social-media">
+                            <ul>
+                                <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                                <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="box">
+                        <div class="categories">
+                            <h1>Kategoriler</h1>
+                            <ul>
+                                <li><a href="#">HTML - CSS</a></li>
+                                <li><a href="#">Javascript</a></li>
+                                <li><a href="#">Swift</a></li>
+                                <li><a href="#">C#</a></li>
+                                <li><a href="#">Java</a></li>
+                                <li><a href="#">Python</a></li>
+                                <li><a href="#">Bilim ve Teknoloji</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>İbrahim Şakar</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script>
+
+        $(document).ready(() => {
+            $('#submitButton').click(() => {
+                var blogTitle   = $("#blogTitle").val();
+                var comSentence = $("#comSentence").val();
+                var comImage    = $("#comImage").val();
+                var contentText = CKEDITOR.instances.contentText.getData();
+
+                var data = {
+                    blogTitle: blogTitle,
+                    comSentence: comSentence,
+                    comImage: comImage,
+                    contentText: contentText
+                }
+                $.post('addNewBlog', {data: data})
+                    .then((addedBlog) => {
+                        console.log(addedBlog);
+                });
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <header>
+        <div class="cat-menus">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3"><a href="#">anasayfa</a></div>
+                    <div class="col-md-3"><a href="#">anasayfa</a></div>
+                    <div class="col-md-3"><a href="#">anasayfa</a></div>
+                    <div class="col-md-3"><a href="#">anasayfa</a></div>
+                    <div class="col-md-3"><a href="#">anasayfa</a></div>
+                    <div class="col-md-3"><a href="#">anasayfa</a></div>
+                    <div class="col-md-3"><a href="#">anasayfa</a></div>
+                    <div class="col-md-3"><a href="#">anasayfa</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 pl">
+                    <div class="logo">
+                        <a href="/"> <xmp><iş/></xmp> </a>
+                    </div>
+                </div>
+                <div class="col-md-9 pr">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="/">anasayfa</a></li>
+                            <li><a href="/about">hakkımda</a></li>
+                            <li><a href="#">kategori</a></li>
+                            <li><a href="/contact">iletişim</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>    
+    <div class="main-head"></div>
+        <div class="container" style="width:40%;">
+            <div class="post-center">
+                <form>                                             
+                    <div class="form-group">
+                        <label for="blogTitle">Kullanıcı Adı</label>
+                        <input type="text" class="form-control" id="blogTitle" placeholder="Enter the blog title">
+                    </div>
+                    <div class="form-group">
+                        <label for="comSentence">Şifre</label>
+                        <input type="text" class="form-control" id="comSentence" placeholder="Enter the commercial sentence">
+                    </div>
+                    <div class="form-group">
+                        <label for="comImage">Şifre</label>
+                        <input type="text" class="form-control" id="comImage" placeholder="Enter the image URL">
+                    </div>
+                    <textarea name="editor" id="contentText"></textarea>
+                    <button type="submit" id="submitButton" class="btn btn-primary">Submit</button>                           
+                </form>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+
+        <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+        <script>
+            CKEDITOR.replace('editor');
+        </script>

@@ -1,0 +1,25 @@
+<% include ../partials/header %>
+
+<div class="main-head" style="background: #fff;">
+    <div class="container">
+        <div class="col-lg-4 mx-auto">
+            <section>
+                <% adminActions.forEach((action) =>{ %>
+                <div class="post-center">
+                    <button id="<%= action.actionId %>" onclick="catchId(this.id)" class="btn btn-outline-primary btn-block"><%= action.displayName %></button>
+                </div>
+            </article>
+                <%  });  %>
+            </section>
+        </div>
+    </div>
+</div>
+
+<script>
+    function catchId(clicked_Id){
+        alert(clicked_Id + " numaralı Id'ye tıklandı.");
+        if(clicked_Id == 2){
+            window.location.href = 'addNewBlog'; return false;
+        }
+    }
+</script>

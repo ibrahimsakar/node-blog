@@ -1,0 +1,113 @@
+<% include ./partials/header %>
+
+<div class="main-head"></div>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 p0">
+                    <section>
+                        <div class="title">
+                            <h1>İletişim</h1>
+                        </div>
+                        <article>
+                        <div class="post-center">
+                            <form id="contact-form" method="post" role="form">
+
+                                    <div class="messages"></div>
+                                
+                                    <div class="controls">
+                                
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_name">Adınız</label>
+                                                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Adınızı giriniz" required="required" data-error="Firstname is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_lastname">Soyadınız</label>
+                                                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Soyadınızı giriniz" required="required" data-error="Lastname is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_email">Email</label>
+                                                    <input id="form_email" type="email" name="email" class="form-control" placeholder="E-mail adresinizi giriniz" required="required" data-error="Valid email is required.">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="form_phone">Telefon</label>
+                                                    <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Telefon numaranızı giriniz">
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label for="form_message">Mesajınız</label>
+                                                    <textarea id="form_message" name="message" class="form-control" placeholder="Mesajınızı giriniz" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <button class="btn btn-success btn-send">Gönder</button>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                </form>
+                            <div class="clearfix"></div>
+                        </div>
+                        </article>
+                    </section>
+                </div>
+                <div class="col-md-4">
+                    <div class="right-boxex">
+                        <div class="box">
+                            <div class="search">
+                                <form action="">
+                                    <input type="text" placeholder="Arama Yap...">
+                                    <input type="submit" value="">
+                                    <span class="fa fa-search"></span>
+                                </form>
+                            </div>
+                            <div class="social-media">
+                                <ul>
+                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-instagram"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="box">
+                            <div class="categories">
+                                <h1>Kategoriler</h1>
+                                <ul>
+                                    <li><a href="#">HTML - CSS</a></li>
+                                    <li><a href="#">Javascript</a></li>
+                                    <li><a href="#">Swift</a></li>
+                                    <li><a href="#">C#</a></li>
+                                    <li><a href="#">Java</a></li>
+                                    <li><a href="#">Python</a></li>
+                                    <li><a href="#">Bilim ve Teknoloji</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<% include ./partials/footer %>

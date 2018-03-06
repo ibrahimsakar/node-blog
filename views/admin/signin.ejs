@@ -1,0 +1,21 @@
+<% include ../partials/header %>
+
+<div class="main-head"></div>
+    <div class="container" style="width:40%;">
+        <div class="post-center">
+            <form method="POST" action="/signin">                                
+                <div class="controls">                            
+                        <div class="form-group">
+                            <label for="userName">Kullanıcı Adı</label>
+                            <input type="text" class="form-control" id="userName" placeholder="Kullanıcı adınızı giriniz" name="username">
+                        </div>
+                        <div class="form-group">
+                            <label for="userPassword">Şifre</label>
+                            <input type="password" class="form-control" id="userPassword" placeholder="Şifrenizi giriniz" name="password">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Giriş</button>
+                </div>                                
+            </form>
+            <div class="clearfix"></div>
+        </div>
+    </div>
