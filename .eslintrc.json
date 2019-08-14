@@ -1,0 +1,13 @@
+{
+    "extends": [
+        "eser"
+    ],
+    "env": {
+        "commonjs": true,
+        "node": true,
+        "jest": true
+    },
+    "parserOptions": {
+        "sourceType": "module"
+    }
+}
